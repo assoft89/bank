@@ -18,7 +18,7 @@ header ("Content-Type: text/html; charset=utf-8");
 -->
 <script src="1.4.5/jquery-1.11.3.js"></script>
 
-		<label for="search1">Мкр./улица</label>
+		<label for="search1">Поиск</label>
 		<input type="search" name="password" id="search11" value="" tabindex="1"/>
 		
 <table class="table table-striped table-bordered">
@@ -51,7 +51,7 @@ header ("Content-Type: text/html; charset=utf-8");
 
 
 
-function onClickVisvat(ser){
+function doSearch(ser){
 	        $.ajax({
             type: 'GET',
             url: 'clients.php',
@@ -83,7 +83,7 @@ function onClickVisvat(ser){
 		
 	
 }
-onClickVisvat('');
+doSearch('');
 
 $("#search11").keyup(function(o){
 		
@@ -92,11 +92,11 @@ $("#search11").keyup(function(o){
 	});
 $("#search11").on('input',function(e){
 		var ser = search11.value;
-		onClickVisvat(ser);		
+		doSearch(ser);		
 });
 	</script>
 	
-	<!--<input type="button" class="ui-button-a" value="Вызвать" onclick="onClickVisvat()">
+	<!--<input type="button" class="ui-button-a" value="Вызвать" onclick="doSearch()">
 	-->
 </body>
 </html>

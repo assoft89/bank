@@ -1,3 +1,4 @@
 <IfModule dir_module>
     DirectoryIndex index.php
+	php_value default_charset cp1251
 </IfModule>
